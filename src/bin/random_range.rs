@@ -11,8 +11,10 @@ fn main() {
   io::stdin().read_line(&mut user_input).expect("Failed to read line");
 
   let int_input:i32 = user_input.trim().parse().unwrap();
+
+  let random_int = rng.gen_range(0..int_input);
   
   // Ln 16 not working
-  println!("Random integer: ", rng.gen_range(0..int_input));
+  println!("Random integer: {}", random_int);
 
 }
